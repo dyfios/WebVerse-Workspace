@@ -34,6 +34,10 @@
         "to": "../Runtimes/Desktop/"
       },
       {
+        "from": "Runtimes/Desktop-Mac/",
+        "to": "../Runtimes/Desktop-Mac/"
+      },
+      {
         "from": "webverse.config",
         "to": "../webverse.config"
       },
@@ -55,6 +59,11 @@
       "createStartMenuShortcut": true
     },
     "win": {
+      "publish": [
+        "github"
+      ]
+    },
+    "mac": {
       "publish": [
         "github"
       ]

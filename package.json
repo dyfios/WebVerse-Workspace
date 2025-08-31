@@ -28,24 +28,6 @@
     "icon": "images/WebVerse.png",
     "productName": "WebVerse",
     "copyright": "Copyright © 2025 Five Squared Interactive",
-    "extraResources": [
-      {
-        "from": "Runtimes/Desktop/",
-        "to": "../Runtimes/Desktop/"
-      },
-      {
-        "from": "Runtimes/Desktop-Mac/",
-        "to": "../Runtimes/Desktop-Mac/"
-      },
-      {
-        "from": "webverse.config",
-        "to": "../webverse.config"
-      },
-      {
-        "from": ".wv-settings",
-        "to": "../.wv-settings"
-      }
-    ],
     "nsis": {
       "oneClick": true,
       "allowElevation": true,
@@ -61,11 +43,39 @@
     "win": {
       "publish": [
         "github"
+      ],
+      "extraResources": [
+        {
+          "from": "Runtimes/Desktop/",
+          "to": "../Runtimes/Desktop/"
+        },
+        {
+          "from": "webverse.config",
+          "to": "../webverse.config"
+        },
+        {
+          "from": ".wv-settings",
+          "to": "../.wv-settings"
+        }
       ]
     },
     "mac": {
       "publish": [
         "github"
+      ],
+      "extraResources": [
+        {
+          "from": "Runtimes/Desktop-Mac/",
+          "to": "../Runtimes/Desktop-Mac/"
+        },
+        {
+          "from": "webverse.config",
+          "to": "../webverse.config"
+        },
+        {
+          "from": ".wv-settings",
+          "to": "../.wv-settings"
+        }
       ]
     }
   },

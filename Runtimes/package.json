@@ -12,7 +12,7 @@
     "version": "2.1.5",
     "license": "MIT",
     "scripts": {
-        "start": "node runtimedownloader.js https://webverse-runtime.s3.us-east-1.amazonaws.com/builds/v2.1.5-22June2025/Desktop-v2.1.5_22June2025_83bff28.zip Desktop"
+        "start": "node runtimedownloader.js https://webverse-runtime.s3.us-east-1.amazonaws.com/builds/v2.1.5-22June2025/Desktop-v2.1.5_22June2025_83bff28.zip Desktop https://webverse-runtime.s3.us-east-1.amazonaws.com/builds/v2.1.5-22June2025/Desktop-Mac-v2.1.5_22June2025_83bff28.zip Desktop-Mac"
     },
     "dependencies": {
         "node-downloader-helper": "latest",

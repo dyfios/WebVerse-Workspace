@@ -22,17 +22,35 @@ if (applicationSettings.Initialize() == false) {
   console.log("Error reading WebVerse config.");
   app.quit();
 }
-if (applicationSettings.settings['desktop-runtime'] == null ||
-  applicationSettings.settings['desktop-runtime']['path'] == null) {
-    console.log("Error getting desktop runtime path.");
-    app.quit();
+
+/**
+ * Determine runtime path based on platform.
+ */
+let runtimePath = null;
+const platform = process.platform;
+if (platform === 'darwin') {
+  // MacOS
+  if (applicationSettings.settings['desktop-runtime-mac'] == null ||
+    applicationSettings.settings['desktop-runtime-mac']['path'] == null) {
+      console.log("Error getting MacOS desktop runtime path.");
+      app.quit();
+  }
+  runtimePath = applicationSettings.settings['desktop-runtime-mac']['path'];
+} else {
+  // Windows (and other platforms default to Windows runtime)
+  if (applicationSettings.settings['desktop-runtime'] == null ||
+    applicationSettings.settings['desktop-runtime']['path'] == null) {
+      console.log("Error getting desktop runtime path.");
+      app.quit();
+  }
+  runtimePath = applicationSettings.settings['desktop-runtime']['path'];
 }
 
 /**
  * Runtime handler.
  */
 let runtimeHandler = null;
-runtimeHandler = new RuntimeHandler(applicationSettings.settings['desktop-runtime']['path']);
+runtimeHandler = new RuntimeHandler(runtimePath);
 
 /**
  * Disable reload shortcut.

@@ -20,12 +20,14 @@ This is the top-level WebVerse desktop application. It consists of an Electron f
 ## Supported Platforms
 
 * Windows 10/11 with/without SteamVR
+* MacOS with/without SteamVR
 
 ## Getting Started
 
 ### WebVerse Dependencies
 
-* Windows 10 or Windows 11
+* Windows 10 or Windows 11 (for Windows builds)
+* MacOS 10.14+ (for MacOS builds)
 * SteamVR (for VR support)
 
 ### Installing WebVerse
